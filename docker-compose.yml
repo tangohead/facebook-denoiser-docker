@@ -1,0 +1,11 @@
+version: "3"
+services:
+  denoiser:
+    build: 
+      context: .  
+      dockerfile: facebook-denoiser.dockerfile
+    volumes:
+      - ./data/input/:/data/input/
+      - ./data/output/:/data/output/
+    shm_size: 8G
+      
